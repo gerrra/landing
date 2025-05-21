@@ -17,7 +17,7 @@ const HowItWorks: React.FC = () => {
                 grid-flow-dense
 
                 md:grid-cols-[1fr_1fr]
-                sm:grid-cols-[2fr_1fr]
+                grid-cols-[2fr_1fr]
             '
         >
             <ScrollAppear
@@ -50,8 +50,7 @@ const HowItWorks: React.FC = () => {
 
                                 lg:text-2xl
                                 md:text-xl
-                                sm:text-lg
-                                text-base
+                                text-lg
                             '
                         >
                             Simple setup
@@ -62,13 +61,11 @@ const HowItWorks: React.FC = () => {
 
                                 lg:mb-8
                                 md:mb-6
-                                sm:mb-5
-                                mb-4
+                                mb-5
 
                                 lg:text-2xl
                                 md:text-xl
-                                sm:text-lg
-                                text-base
+                                text-lg
                             '
                         >
                             Reliable performance
@@ -77,8 +74,7 @@ const HowItWorks: React.FC = () => {
                             className='
                                 lg:text-lg
                                 md:text-lg
-                                sm:text-base
-                                text-sm
+                                text-base
                             '
                         >
                             Choose your stack, connect your repo, and DevSpark takes care of the rest: deployment, security, monitoring, and scaling

@@ -73,13 +73,11 @@ const Testimonials: React.FC = () => {
 
                             lg:text-2xl
                             md:text-xl
-                            sm:text-lg
-                            text-base
+                            text-lg
 
                             lg:mb-8
                             md:mb-6
-                            sm:mb-5
-                            mb-4
+                            mb-5
                         '
                     >
                         Testimonials
@@ -94,12 +92,11 @@ const Testimonials: React.FC = () => {
                     items-center
 
                     md:w-[80%]
-                    sm:w-[100%]
+                    w-[100%]
 
                     lg:gap-4
                     md:gap-4
-                    sm:gap-3
-                    gap-2
+                    gap-3
                 `}
             >
                 {
@@ -119,13 +116,11 @@ const Testimonials: React.FC = () => {
 
                                         lg:p-4
                                         md:p-3
-                                        sm:p-3
-                                        p-2
+                                        p-3
 
                                         lg:gap-4
                                         md:gap-4
-                                        sm:gap-3
-                                        gap-2
+                                        gap-3
                                     '
                                 >
                                     {
@@ -143,8 +138,7 @@ const Testimonials: React.FC = () => {
 
                                                 lg:text-xl
                                                 md:text-lg
-                                                sm:text-base
-                                                text-sm
+                                                text-base
                                             '
                                         >
                                             - {item.name}
@@ -153,8 +147,7 @@ const Testimonials: React.FC = () => {
                                             className='
                                                 lg:text-lg
                                                 md:text-lg
-                                                sm:text-base
-                                                text-sm
+                                                text-base
                                             '
                                         >
                                             {item.description}

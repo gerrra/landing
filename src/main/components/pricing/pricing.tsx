@@ -50,8 +50,7 @@ const Pricing: React.FC = () => {
             return clsx(
                 'lg:p-4',
                 'md:p-3',
-                'sm:p-3',
-                'p-2',
+                'p-3',
 
                 'rounded-lg',
                 'bg-white',
@@ -82,13 +81,11 @@ const Pricing: React.FC = () => {
 
                             lg:text-2xl
                             md:text-xl
-                            sm:text-lg
-                            text-base
+                            text-lg
 
                             lg:mb-8
                             md:mb-6
-                            sm:mb-5
-                            mb-4
+                            mb-5
                         '
                     >
                         Pricing
@@ -103,8 +100,7 @@ const Pricing: React.FC = () => {
 
                     lg:gap-4
                     md:gap-4
-                    sm:gap-3
-                    gap-2
+                    gap-3
 
                     md:grid-cols-[1fr_1fr]
                     grid-cols-1
@@ -126,8 +122,7 @@ const Pricing: React.FC = () => {
 
                                             lg:text-lg
                                             md:text-lg
-                                            sm:text-base
-                                            text-sm
+                                            text-base
                                         '
                                     >
                                         {item.title}
@@ -136,8 +131,7 @@ const Pricing: React.FC = () => {
                                         className='
                                             lg:text-lg
                                             md:text-lg
-                                            sm:text-base
-                                            text-sm
+                                            text-base
                                         '
                                     >
                                         - {item.description}

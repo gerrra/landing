@@ -37,8 +37,7 @@ const Footer: React.FC = () => {
 
                 lg:gap-6
                 md:gap-6
-                sm:gap-4
-                gap-3
+                gap-4
             '
         >
             <ScrollAppear
@@ -56,13 +55,11 @@ const Footer: React.FC = () => {
 
                                 lg:text-lg
                                 md:text-lg
-                                sm:text-base
-                                text-sm
+                                text-base
 
                                 lg:mb-4
                                 md:mb-4
-                                sm:mb-3
-                                mb-2
+                                mb-3
                             '
                         >
                             About us
@@ -73,8 +70,7 @@ const Footer: React.FC = () => {
 
                                 lg:text-lg
                                 md:text-lg
-                                sm:text-base
-                                text-sm
+                                text-base
                             '
                         >
                             DevSpark is a platform for launching and scaling digital projects fast. We help developers, founders, and teams focus on what matters — building products, not infrastructure
@@ -98,13 +94,11 @@ const Footer: React.FC = () => {
 
                                 lg:text-lg
                                 md:text-lg
-                                sm:text-base
-                                text-sm
+                                text-base
 
                                 lg:mb-4
                                 md:mb-4
-                                sm:mb-3
-                                mb-2
+                                mb-3
                             '
                         >
                             Navigation
@@ -122,8 +116,7 @@ const Footer: React.FC = () => {
 
                                         lg:text-lg
                                         md:text-lg
-                                        sm:text-base
-                                        text-sm
+                                        text-base
 
                                         py-1
                                     '
@@ -152,13 +145,11 @@ const Footer: React.FC = () => {
 
                                 lg:text-lg
                                 md:text-lg
-                                sm:text-base
-                                text-sm
+                                text-base
 
                                 lg:mb-4
                                 md:mb-4
-                                sm:mb-3
-                                mb-2
+                                mb-3
                             '
                         >
                             Contact
@@ -167,8 +158,7 @@ const Footer: React.FC = () => {
                             className='
                                 lg:mb-4
                                 md:mb-4
-                                sm:mb-3
-                                mb-2
+                                mb-3
                             '
                         >
                             {
@@ -183,8 +173,7 @@ const Footer: React.FC = () => {
 
                                             lg:text-lg
                                             md:text-lg
-                                            sm:text-base
-                                            text-sm
+                                            text-base
 
                                             w-fit
                                             mx-auto

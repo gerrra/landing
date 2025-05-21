@@ -32,8 +32,7 @@ const GetStarted: React.FC = () => {
 
                     lg:mb-8
                     md:mb-6
-                    sm:mb-5
-                    mb-4
+                    mb-5
                 '
                 direction={ComponentAppearDirection.Down}
                 component={
@@ -44,13 +43,11 @@ const GetStarted: React.FC = () => {
 
                                 lg:text-2xl
                                 md:text-xl
-                                sm:text-lg
-                                text-base
+                                text-lg
 
                                 lg:mb-4
                                 md:mb-4
-                                sm:mb-3
-                                mb-2
+                                mb-3
                             '
                         >
                             Get started today
@@ -59,8 +56,7 @@ const GetStarted: React.FC = () => {
                             className='
                                 lg:text-lg
                                 md:text-lg
-                                sm:text-base
-                                text-sm
+                                text-base
                             '
                         >
                             DevSpark is your next step in digital growth. Launch your first project now
@@ -73,7 +69,7 @@ const GetStarted: React.FC = () => {
                 classNames='
                     lg:w-[50%]
                     md:w-[80%]
-                    sm:w-[80%]
+                    w-[100%]
                 '
                 component={
                     <div
@@ -89,8 +85,7 @@ const GetStarted: React.FC = () => {
 
                             lg:gap-4
                             md:gap-4
-                            sm:gap-3
-                            gap-2
+                            gap-3
                         '
                     >
                         {

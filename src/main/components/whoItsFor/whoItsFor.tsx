@@ -50,8 +50,7 @@ const WhoItsFor: React.FC = () => {
                 classNames='
                     lg:mb-8
                     md:mb-6
-                    sm:mb-5
-                    mb-4
+                    mb-5
                 '
                 direction={ComponentAppearDirection.Right}
                 component={
@@ -61,8 +60,7 @@ const WhoItsFor: React.FC = () => {
 
                             lg:text-2xl
                             md:text-xl
-                            sm:text-lg
-                            text-base
+                            text-lg
                         '
                     >
                         DevSpark is perfect if you're:
@@ -76,12 +74,11 @@ const WhoItsFor: React.FC = () => {
                     items-center
 
                     md:grid-cols-3
-                    sm:grid-cols-1
+                    grid-cols-1
 
                     lg:gap-4
                     md:gap-4
-                    sm:gap-3
-                    gap-2
+                    gap-3
                 '
             >
                 {
@@ -99,13 +96,11 @@ const WhoItsFor: React.FC = () => {
 
                                         lg:text-xl
                                         md:text-lg
-                                        sm:text-base
-                                        text-sm
+                                        text-base
 
                                         lg:gap-4
                                         md:gap-4
-                                        sm:gap-3
-                                        gap-2
+                                        gap-3
                                     '
                                 >
                                     {

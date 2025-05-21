@@ -39,8 +39,7 @@ const About: React.FC = () => {
 
                 lg:gap-12
                 md:gap-8
-                sm:gap-6
-                gap-4
+                gap-6
             '
         >
             <div>
@@ -48,8 +47,7 @@ const About: React.FC = () => {
                     classNames='
                         lg:mb-10
                         md:mb-8
-                        sm:mb-6
-                        mb-4
+                        mb-6
                     '
                     direction={ComponentAppearDirection.Right}
                     component={
@@ -60,18 +58,15 @@ const About: React.FC = () => {
 
                                     lg:text-4xl
                                     md:text-3xl
-                                    sm:text-2xl
-                                    text-xl
+                                    text-2xl
 
                                     lg:mb-6
                                     md:mb-6
-                                    sm:mb-5
-                                    mb-4
+                                    mb-5
 
                                     lg:mt-12
                                     md:mt-10
-                                    sm:mt-8
-                                    mt-6
+                                    mt-8
                                 '
                             >
                                 DevSpark
@@ -82,13 +77,11 @@ const About: React.FC = () => {
 
                                     lg:text-2xl
                                     md:text-xl
-                                    sm:text-lg
-                                    text-base
+                                    text-lg
 
                                     lg:mb-4
                                     md:mb-4
-                                    sm:mb-3
-                                    mb-2
+                                    mb-3
                                 '
                             >
                                 Ignite ideas. Build with technology
@@ -97,8 +90,7 @@ const About: React.FC = () => {
                                 className='
                                     lg:text-lg
                                     md:text-lg
-                                    sm:text-base
-                                    text-sm
+                                    text-base
                                 '
                             >
                                 A platform for fast launch, testing, and scaling of digital products. Everything a developer needs — in one place
@@ -110,8 +102,7 @@ const About: React.FC = () => {
                     classNames='
                         lg:mb-4
                         md:mb-4
-                        sm:mb-3
-                        mb-2
+                        mb-3
                     '
                     direction={ComponentAppearDirection.Right}
                     component={
@@ -122,13 +113,11 @@ const About: React.FC = () => {
 
                                     lg:text-2xl
                                     md:text-xl
-                                    sm:text-lg
-                                    text-base
+                                    text-lg
 
                                     lg:mb-4
                                     md:mb-4
-                                    sm:mb-3
-                                    mb-2
+                                    mb-3
                                 '
                             >
                                 Everything you need to grow your product
@@ -137,8 +126,7 @@ const About: React.FC = () => {
                                 className='
                                     lg:text-lg
                                     md:text-lg
-                                    sm:text-base
-                                    text-sm
+                                    text-base
                                 '
                             >
                                 DevSpark brings together development, deployment, and analytics tools so you can focus on building — not on boring setups
@@ -153,8 +141,7 @@ const About: React.FC = () => {
                             classNames='
                                 lg:mb-4
                                 md:mb-4
-                                sm:mb-3
-                                mb-2
+                                mb-3
                             '
                             direction={ComponentAppearDirection.Right}
                             durationTime={`${1500 + 300 * index}`}
@@ -165,8 +152,7 @@ const About: React.FC = () => {
 
                                         lg:text-lg
                                         md:text-lg
-                                        sm:text-base
-                                        text-sm
+                                        text-base
                                     '
                                 >
                                     • {item.title}

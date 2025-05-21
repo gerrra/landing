@@ -14,8 +14,7 @@ const LayoutBlock: React.FC<layoutBlockProps> = (props: layoutBlockProps) => {
 
                 lg:p-12
                 md:p-8
-                sm:p-6
-                p-4
+                p-6
             `
         },
         [props.classNames],

@@ -10,7 +10,6 @@ const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
     const width1024 = 1024;
     const width768 = 768;
-    const width640 = 640;
     const [width, setWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
 
     useEffect(
@@ -42,18 +41,15 @@ const Header = () => {
 
             lg:gap-4
             md:gap-4
-            sm:gap-3
-            gap-2
+            gap-3
 
             lg:px-12
             md:px-8
-            sm:px-6
-            px-4
+            px-6
 
             lg:py-4
             md:py-4
-            sm:py-3
-            py-2
+            py-3
         `,
         [hasShadow],
     );
@@ -66,8 +62,7 @@ const Header = () => {
 
             lg:text-2xl
             md:text-xl
-            sm:text-lg
-            text-base
+            text-lg
             ${(showTitle || showMenu) ? 'opacity-100' : 'opacity-0'}
         `,
         [showTitle, showMenu],
@@ -91,7 +86,6 @@ const Header = () => {
             let translate: string = '';
             if (width < width1024) translate = 'translate-y-[72px]';
             if (width < width768) translate = 'translate-y-[56px]';
-            if (width < width640) translate = 'translate-y-[40px]';
 
             return `
                 grid
@@ -122,8 +116,7 @@ const Header = () => {
 
                     lg:gap-4
                     md:gap-4
-                    sm:gap-3
-                    gap-2
+                    gap-3
                 '
             >
                 <SmartImageCloudinary
@@ -132,13 +125,11 @@ const Header = () => {
                     className='
                         lg:w-12
                         md:w-10
-                        sm:w-8
-                        w-6
+                        w-8
 
                         lg:h-12
                         md:h-10
-                        sm:h-8
-                        h-6
+                        h-8
                     '
                 />
                 <span
@@ -159,13 +150,11 @@ const Header = () => {
 
                             lg:text-lg
                             md:text-lg
-                            sm:text-base
-                            text-sm
+                            text-base
 
                             lg:gap-6
                             md:gap-6
-                            sm:gap-4
-                            gap-3
+                            gap-4
                         '
                     >
                         {
@@ -200,13 +189,11 @@ const Header = () => {
     
                                 lg:w-12
                                 md:w-10
-                                sm:w-8
-                                w-6
+                                w-8
     
                                 lg:h-12
                                 md:h-10
-                                sm:h-8
-                                h-6
+                                h-8
                             '
                         />
                     </div>
@@ -229,8 +216,7 @@ const Header = () => {
 
                                 lg:text-lg
                                 md:text-lg
-                                sm:text-base
-                                text-sm
+                                text-base
                             '
                         >
                             {link.title}

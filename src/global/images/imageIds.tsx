@@ -1,0 +1,10 @@
+export const base = 'https://res.cloudinary.com/degbwhghr/image/upload';
+export const logoId = '/v1747720412/favicon_ze7ni5.png';
+export const devSparkAboutId = '/v1747719233/7146a0d2c036376c4811bffc6fc2e89b_1_sv19ek.png';
+export const newIdeaId = '/v1747771685/lampochka_pixian_ai_uhdjdr.png';
+export const tiredId = '/v1747771685/png-clipart-recycle-logo-computer-icons-arrow-reverse-hd-icon-miscellaneous-text_pixian_ai_dvmihb.png';
+export const scalabilityId = '/v1747771685/Canvas-Church_pixian_ai_xr6r5m.png';
+export const howItWorksId = '/v1747776918/17828-scaled_pixian_ai_ljguyb.png';
+export const testimonialsId = '/v1747782497/selinsofia_20616_2193872_Selin_Sofia_image-website-1200x1200_1_fpduxu.png';
+export const ElenaId = '/v1747782828/orig_srgzdc.webp';
+export const DanielId = '/v1747782828/ae53a9193d10b993fdd3701479d13c73_lmljxm.jpg';

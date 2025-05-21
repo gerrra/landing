@@ -28,25 +28,25 @@ const MainPage: React.FC = () => {
                 component={<About />}
             />
             <LayoutBlock
-                classNames='bg-white'
+                bgWhite
                 component={<WhoItsFor />}
             />
             <LayoutBlock
                 component={<HowItWorks />}
             />
             <LayoutBlock
-                classNames='bg-white'
+                bgWhite
                 component={<Testimonials />}
             />
             <LayoutBlock
                 component={<Pricing />}
             />
             <LayoutBlock
-                classNames='bg-white'
+                bgWhite
                 component={<GetStarted />}
             />
             <LayoutBlock
-                classNames='bg-[#1a1a1a]'
+                bgBlack
                 component={<Footer />}
             />
         </div>

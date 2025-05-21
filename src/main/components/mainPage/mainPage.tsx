@@ -14,9 +14,13 @@ const MainPage: React.FC = () => {
         <div
             className='
                 bg-gray-100
-                mt-16
                 relative
                 overflow-hidden
+
+                lg:mt-20
+                md:mt-19
+                sm:mt-16
+                mt-10
             '
         >
             <Header />

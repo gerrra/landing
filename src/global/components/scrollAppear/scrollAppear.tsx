@@ -17,7 +17,7 @@ const ScrollAppear: React.FC<scrollAppearProps> = ({
     classNames,
     direction = ComponentAppearDirection.Left,
     animationTrajectory = AnimationTrajectory.EaseInOut,
-    durationTime = '1500',
+    durationTime = '1000',
     pathLength = '20',
 }) => {
     const targetRef = useRef<HTMLDivElement | null>(null);

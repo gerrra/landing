@@ -1,16 +1,23 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import SmartImageCloudinary from '../smartImage/smartImage';
-import { logoId } from '../../images/imageIds';
+import { burgerId, closeId, logoId } from '../../images/imageIds';
 import { links } from '../../service/globalService';
 import { LinksItemType } from '../../types/linksItemType';
 
 const Header = () => {
     const [hasShadow, setHasShadow] = useState(false);
+    const [showTitle, setShowTitle] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
+    const width1024 = 1024;
+    const width768 = 768;
+    const width640 = 640;
+    const [width, setWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
 
     useEffect(
         () => {
             const handleScroll = () => {
                 setHasShadow(window.scrollY > 0);
+                setShowTitle(window.scrollY > 50);
             };
 
             window.addEventListener('scroll', handleScroll);
@@ -25,18 +32,83 @@ const Header = () => {
             top-0
             left-0
             w-full
-            z-50
+            z-10
             grid
             grid-cols-[auto_auto_1fr]
-            gap-2
             items-center
-            py-4
-            px-8
             transition-all
             duration-300
             ${hasShadow ? 'shadow-md bg-white' : ''}
+
+            lg:gap-4
+            md:gap-4
+            sm:gap-3
+            gap-2
+
+            lg:px-12
+            md:px-8
+            sm:px-6
+            px-4
+
+            lg:py-4
+            md:py-4
+            sm:py-3
+            py-2
         `,
         [hasShadow],
+    );
+
+    const titleClassNames = useMemo(
+        () => `
+            font-bold
+            transition-all
+            duration-300
+
+            lg:text-2xl
+            md:text-xl
+            sm:text-lg
+            text-base
+            ${(showTitle || showMenu) ? 'opacity-100' : 'opacity-0'}
+        `,
+        [showTitle, showMenu],
+    );
+
+    useEffect(
+        () => {
+            const handleResize = () => {
+                setWidth(window.innerWidth);
+                setShowMenu(false);
+            }
+            window.addEventListener('resize', handleResize);
+
+            return () => window.removeEventListener('resize', handleResize);
+        },
+        [],
+    );
+
+    const miniMenuWrapClasses = useMemo(
+        () => {
+            let translate: string = '';
+            if (width < width1024) translate = 'translate-y-[72px]';
+            if (width < width768) translate = 'translate-y-[56px]';
+            if (width < width640) translate = 'translate-y-[40px]';
+
+            return `
+                grid
+                grid-cols-1
+                fixed
+                top-0
+                right-0
+                w-full
+                transition
+                duration-300
+                shadow-md
+                ${showMenu ? `opacity-100 ${translate}` : 'opacity-0 -translate-y-[100%]'}
+                ${hasShadow ? 'bg-white' : 'bg-gray-100'}
+            `
+
+        },
+        [width, showMenu, hasShadow],
     );
 
     return (
@@ -47,46 +119,125 @@ const Header = () => {
                 className='
                     flex
                     items-center
+
+                    lg:gap-4
+                    md:gap-4
+                    sm:gap-3
                     gap-2
                 '
             >
                 <SmartImageCloudinary
                     alt='Logo'
                     publicId={logoId}
-                    className='w-8 h-8'
+                    className='
+                        lg:w-12
+                        md:w-10
+                        sm:w-8
+                        w-6
+
+                        lg:h-12
+                        md:h-10
+                        sm:h-8
+                        h-6
+                    '
                 />
                 <span
-                    className='font-bold text-lg'
+                    className={titleClassNames}
                 >
                     DevSpark
                 </span>
             </div>
-            <nav
-                className='
-                    col-span-2
-                    flex
-                    justify-end
-                    gap-6
-                    text-sm
-                    font-medium
-                    text-gray-700
-                '
+            {
+                width >= width1024
+                    ? <nav
+                        className='
+                            col-span-2
+                            flex
+                            justify-end
+                            text-gray-700
+                            font-medium
+
+                            lg:text-lg
+                            md:text-lg
+                            sm:text-base
+                            text-sm
+
+                            lg:gap-6
+                            md:gap-6
+                            sm:gap-4
+                            gap-3
+                        '
+                    >
+                        {
+                            links.map((link: LinksItemType, index: number) => (
+                                <a
+                                    key={index}
+                                    href={`#${link.href}`}
+                                    className='
+                                        hover:text-blue-500
+                                        active:scale-95
+                                    '
+                                >
+                                    {link.title}
+                                </a>
+                            ))
+                        }
+                    </nav>
+                    : <div
+                        className='
+                            col-span-2
+                            flex
+                            justify-end
+                        '
+                    >
+                        <SmartImageCloudinary
+                            alt='Menu'
+                            publicId={showMenu ? closeId : burgerId}
+                            onClick={() => setShowMenu(!showMenu)}
+                            className='
+                                active:scale-95
+                                cursor-pointer
+    
+                                lg:w-12
+                                md:w-10
+                                sm:w-8
+                                w-6
+    
+                                lg:h-12
+                                md:h-10
+                                sm:h-8
+                                h-6
+                            '
+                        />
+                    </div>
+            }
+            <div
+                className={miniMenuWrapClasses}
             >
                 {
                     links.map((link: LinksItemType, index: number) => (
                         <a
                             key={index}
                             href={`#${link.href}`}
+                            onClick={() => setShowMenu(!showMenu)}
                             className='
+                                w-full
                                 hover:text-blue-500
                                 active:scale-95
+                                py-4
+                                px-6
+
+                                lg:text-lg
+                                md:text-lg
+                                sm:text-base
+                                text-sm
                             '
                         >
                             {link.title}
                         </a>
                     ))
                 }
-            </nav>
+            </div>
         </div>
     )
 }

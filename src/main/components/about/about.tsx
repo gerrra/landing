@@ -46,10 +46,10 @@ const About: React.FC = () => {
             <div>
                 <ScrollAppear
                     classNames='
-                        lg:mb-12
-                        md:mb-10
-                        sm:mb-8
-                        mb-6
+                        lg:mb-10
+                        md:mb-8
+                        sm:mb-6
+                        mb-4
                     '
                     direction={ComponentAppearDirection.Right}
                     component={

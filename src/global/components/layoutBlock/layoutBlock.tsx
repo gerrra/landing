@@ -10,7 +10,7 @@ const LayoutBlock: React.FC<layoutBlockProps> = (props: layoutBlockProps) => {
         () => {
             return `
                 bg-gray-100
-                ${props.classNames}
+                ${props.classNames ?? ''}
 
                 lg:p-12
                 md:p-8

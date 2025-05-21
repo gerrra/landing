@@ -8,3 +8,5 @@ export const howItWorksId = '/v1747776918/17828-scaled_pixian_ai_ljguyb.png';
 export const testimonialsId = '/v1747782497/selinsofia_20616_2193872_Selin_Sofia_image-website-1200x1200_1_fpduxu.png';
 export const ElenaId = '/v1747782828/orig_srgzdc.webp';
 export const DanielId = '/v1747782828/ae53a9193d10b993fdd3701479d13c73_lmljxm.jpg';
+export const burgerId = '/v1747859692/png-transparent-menu-feather-icon_pixian_ai_dbgchg.png';
+export const closeId = '/v1747861334/649ef9614b65309c8b75b505_noun-x-3844574_pixian_ai_oyfef6.png';

@@ -37,6 +37,7 @@ const Testimonials: React.FC = () => {
         },
         [],
     );
+
     return (
         <section
             id={ComponentIds.Testimonials}

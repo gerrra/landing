@@ -116,7 +116,7 @@ const Testimonials: React.FC = () => {
 
                                         lg:p-4
                                         md:p-3
-                                        p-3
+                                        p-0
 
                                         lg:gap-4
                                         md:gap-4

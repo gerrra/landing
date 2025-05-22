@@ -21,11 +21,12 @@ const SmartImageCloudinary: React.FC<Props> = ({
 
     return (
         <img
-            onClick={onClick}
+            onClick={() => onClick()}
             src={url}
             alt={alt}
-            loading="lazy"
+            loading='lazy'
             className={className}
+            tabIndex={0}
         />
     );
 };

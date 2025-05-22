@@ -60,7 +60,7 @@ const Header = () => {
         () => {
             const handleClickOutside = (event: MouseEvent) => {
                 if (ref.current && !ref.current.contains(event.target as Node)) {
-                    setShowMenu(false)
+                    if (showMenu) setShowMenu(false)
                 }
             }
             const handleResize = () => {
@@ -83,7 +83,7 @@ const Header = () => {
                 document.addEventListener('mousedown', handleClickOutside);
             };
         },
-        [],
+        [showMenu],
     );
 
     const miniMenuWrapClasses = useMemo(
@@ -102,7 +102,7 @@ const Header = () => {
                 transition
                 duration-300
                 shadow-md
-                ${showMenu ? `opacity-100 ${translate}` : 'opacity-0 -translate-y-[100%]'}
+                ${showMenu ? `opacity-100 ${translate}` : 'opacity-0 -translate-y-full'}
                 ${hasShadow ? 'bg-white' : 'bg-gray-100'}
             `
 

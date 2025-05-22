@@ -60,7 +60,9 @@ const Header = () => {
         () => {
             const handleClickOutside = (event: MouseEvent) => {
                 if (ref.current && !ref.current.contains(event.target as Node)) {
-                    if (showMenu) setShowMenu(false)
+                    if (!!showMenu) {
+                        setShowMenu(false);
+                    }
                 }
             }
             const handleResize = () => {
@@ -112,6 +114,7 @@ const Header = () => {
 
     return (
         <div
+            ref={ref}
             className={headerClassNames}
         >
             <div
@@ -204,7 +207,6 @@ const Header = () => {
                     </div>
             }
             <div
-                ref={ref}
                 className={miniMenuWrapClasses}
             >
                 {

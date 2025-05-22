@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import SmartImageCloudinary from '../smartImage/smartImage';
 import { burgerId, closeId, logoId } from '../../images/imageIds';
 import { links } from '../../service/globalService';
@@ -11,19 +11,7 @@ const Header = () => {
     const width1024 = 1024;
     const width768 = 768;
     const [width, setWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
-
-    useEffect(
-        () => {
-            const handleScroll = () => {
-                setHasShadow(window.scrollY > 0);
-                setShowTitle(window.scrollY > 50);
-            };
-
-            window.addEventListener('scroll', handleScroll);
-            return () => window.removeEventListener('scroll', handleScroll);
-        },
-        [],
-    );
+    const ref = useRef<HTMLDivElement>(null);
 
     const headerClassNames = useMemo(
         () => `
@@ -70,13 +58,30 @@ const Header = () => {
 
     useEffect(
         () => {
+            const handleClickOutside = (event: MouseEvent) => {
+                if (ref.current && !ref.current.contains(event.target as Node)) {
+                    setShowMenu(false)
+                }
+            }
             const handleResize = () => {
                 setWidth(window.innerWidth);
                 setShowMenu(false);
             }
-            window.addEventListener('resize', handleResize);
+            const handleScroll = () => {
+                setShowMenu(false);
+                setHasShadow(window.scrollY > 0);
+                setShowTitle(window.scrollY > 50);
+            }
 
-            return () => window.removeEventListener('resize', handleResize);
+            window.addEventListener('resize', handleResize);
+            window.addEventListener('scroll', handleScroll);
+            document.addEventListener('mousedown', handleClickOutside);
+
+            return () => {
+                window.removeEventListener('resize', handleResize)
+                window.removeEventListener('scroll', handleScroll)
+                document.addEventListener('mousedown', handleClickOutside);
+            };
         },
         [],
     );
@@ -199,6 +204,7 @@ const Header = () => {
                     </div>
             }
             <div
+                ref={ref}
                 className={miniMenuWrapClasses}
             >
                 {
@@ -210,7 +216,7 @@ const Header = () => {
                             className='
                                 w-full
                                 hover:text-blue-500
-                                active:scale-95
+                                cursor-pointer
                                 py-4
                                 px-6
 
